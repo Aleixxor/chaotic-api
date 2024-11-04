@@ -27,7 +27,7 @@ app.use("/api/mugics", mugic_1.MugicsRoutes);
 // Card Images
 app.get("/api/images/:set/:id", (req, res) => {
     const { set, id } = req.params;
-    const img = path.join(__dirname, "..", "assets", set, `${id}.png`);
+    const img = path.join(__dirname, "assets", set, `${id}.png`);
     res.sendFile(img);
 });
 app.listen(port, () => console.log(`Chaotic API Server running on ${port}`));
