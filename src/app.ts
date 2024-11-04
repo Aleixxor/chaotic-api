@@ -7,6 +7,7 @@ import { LocationsRoutes } from "./routes/locations";
 import { MugicsRoutes } from "./routes/mugic";
 
 // Server
+const port = process.env.PORT || 3000;
 const path = require("path");
 const app = express();
 
@@ -29,4 +30,4 @@ app.get("/api/images/:set/:id", (req, res) => {
   res.sendFile(img);
 });
 
-export default app;
+app.listen(port, () => console.log(`Chaotic API Server running on ${port}`));

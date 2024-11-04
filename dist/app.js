@@ -11,6 +11,7 @@ const battlegear_1 = require("./routes/battlegear");
 const locations_1 = require("./routes/locations");
 const mugic_1 = require("./routes/mugic");
 // Server
+const port = process.env.PORT || 3000;
 const path = require("path");
 const app = (0, express_1.default)();
 // Routes
@@ -29,4 +30,4 @@ app.get("/api/images/:set/:id", (req, res) => {
     const img = path.join(__dirname, "..", "assets", set, `${id}.png`);
     res.sendFile(img);
 });
-exports.default = app;
+app.listen(port, () => console.log(`Chaotic API Server running on ${port}`));
