@@ -7,12 +7,12 @@ This project serves as an API solution for aggregating card data related to the 
 - Provides endpoints to access information about attacks, battlegear, cards, creatures, locations, and mugic related to the game.
 - Centralized repository of Chaotic Trading Card Game assets and data.
 - Makes it easier for developers or enthusiasts to access and utilize card data for various purposes.
+- Is based on the project with mongodb of @unitehenry: https://github.com/unitehenry/chaotic-api.git
 
 ## Technologies Used
 
 - Node.js
 - Express.js
-- MongoDB
 - TypeScript
 
 ## Project Structure
@@ -34,7 +34,6 @@ chaotic-api/
 │   ├── utils/
 │   └── index.ts
 ├── dist/
-├── .env
 ├── tsconfig.json
 └── package.json
 ```
@@ -44,7 +43,7 @@ chaotic-api/
 1. Clone the repository:
 
    ```
-   git clone https://github.com/unitehenry/chaotic-api.git
+   git clone https://github.com/Aleixxor/chaotic-api.git
    ```
 
 2. Navigate to the project directory:
@@ -59,19 +58,7 @@ chaotic-api/
    npm install
    ```
 
-4. Set up MongoDB URL in an environment variable:
-
-   ```
-   echo "DATABASE_URL=mongodb://localhost/chaotic" > .env
-   ```
-
-5. Import data:
-
-   ```
-   npm run import
-   ```
-
-6. Start the server:
+4. Start the server:
    ```
    npm run serve
    ```
