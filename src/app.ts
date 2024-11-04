@@ -12,6 +12,9 @@ const path = require("path");
 const app = express();
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("Chaotic API");
+});
 app.use("/api/cards", CardsRoutes);
 app.use("/api/creatures", CreaturesRoutes);
 app.use("/api/attacks", AttacksRoutes);
