@@ -6,10 +6,7 @@
   "author": "Aleixxor",
   "license": "ISC",
   "scripts": {
-    "dev": "ts-node ./src/app.ts",
-    "start": "npm run build && node ./dist/app.js",
-    "build": "npx tsc",
-    "stage": "npx tsc && git status && git add ."
+    "start": "node app.js"
   },
   "keywords": [
     "Chaotic",
