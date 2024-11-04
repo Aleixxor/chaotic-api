@@ -5,11 +5,13 @@ import { AttacksRoutes } from "./routes/attacks";
 import { BattlegearsRoutes } from "./routes/battlegear";
 import { LocationsRoutes } from "./routes/locations";
 import { MugicsRoutes } from "./routes/mugic";
+import cors from "cors";
 
 // Server
 const port = process.env.PORT || 3000;
 const path = require("path");
 const app = express();
+app.use(cors());
 
 // Routes
 app.get("/", (req, res) => {
