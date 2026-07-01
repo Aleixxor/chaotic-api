@@ -6,6 +6,7 @@ import { BattlegearsRoutes } from "./routes/battlegear";
 import { LocationsRoutes } from "./routes/locations";
 import { MugicsRoutes } from "./routes/mugic";
 import cors from "cors";
+import { ProxyRoutes } from "./routes/proxy";
 
 // Server
 const port = process.env.PORT || 3000;
@@ -23,6 +24,7 @@ app.use("/api/attacks", AttacksRoutes);
 app.use("/api/battlegear", BattlegearsRoutes);
 app.use("/api/locations", LocationsRoutes);
 app.use("/api/mugics", MugicsRoutes);
+app.use("/api/proxy", ProxyRoutes);
 
 // Card Images
 app.get("/api/images/:set/:id", (req, res) => {
